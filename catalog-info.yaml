@@ -1,3 +1,4 @@
+# === 1. Tu componente existente ===
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -19,3 +20,15 @@ spec:
   #   - my-awesome-api
   dependsOn:
     - component:default/python-app
+
+---
+# === 2. Declaración de ubicación que apunta a más componentes ===
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: backstage-app-related-entities
+  description: Entidades relacionadas a backstage-app
+spec:
+  type: file
+  targets:
+    - ./components/auth-module.yaml

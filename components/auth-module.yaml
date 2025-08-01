@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth-module
+  description: Módulo de autenticación usado internamente.
+spec:
+  type: library
+  lifecycle: internal
+  owner: user:default/wellington
+  subcomponentOf: backstage-app
