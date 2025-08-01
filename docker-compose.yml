@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backstage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backstage
+    ports:
+      - '7007:7007'
+    volumes:
+      - ./app-config.local.yaml:/app/app-config.local.yaml:ro
+    environment:
+      NODE_ENV: development
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+    command: ['yarn', 'start']

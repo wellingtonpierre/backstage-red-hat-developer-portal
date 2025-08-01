@@ -145,6 +145,11 @@ const overviewContent = (
 
 const serviceEntityPage = (
   <EntityLayout>
+    {/* other tabs... */}
+    <EntityLayout.Route path="/kubernetes" title="Kubernetes">
+      <EntityKubernetesContent refreshIntervalMs={30000} />
+    </EntityLayout.Route>
+
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
     </EntityLayout.Route>
