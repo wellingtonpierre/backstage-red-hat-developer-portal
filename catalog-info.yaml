@@ -15,7 +15,7 @@ spec:
   type: website
   owner: development
   lifecycle: production
-  providesApis:
-    - my-awesome-api
+  # providesApis:
+  #   - my-awesome-api
   dependsOn:
     - component:default/python-app
