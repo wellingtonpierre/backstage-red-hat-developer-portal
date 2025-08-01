@@ -13,7 +13,7 @@ metadata:
     github.com/project-slug: tu-org/my-awesome-app
 spec:
   type: website
-  owner: team-platform
+  owner: development
   lifecycle: production
   providesApis:
     - my-awesome-api
