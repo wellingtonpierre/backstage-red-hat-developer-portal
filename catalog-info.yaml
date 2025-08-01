@@ -18,20 +18,4 @@ spec:
   providesApis:
     - my-awesome-api
   dependsOn:
-    - component:default/my-database
-    - resource:default/my-s3-bucket
-
----
-# Segundo bloque: El Location que referencia otras entidades
-apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: my-project-entities
-  description: Entidades relacionadas al proyecto.
-spec:
-  type: url
-  targets:
-    - ./backstage/component-my-database.yaml
-    - ./backstage/resource-my-s3-bucket.yaml
-    - ./backstage/group-team-platform.yaml
-    - ./backstage/api-my-awesome-api.yaml
+    - component:default/python-app
