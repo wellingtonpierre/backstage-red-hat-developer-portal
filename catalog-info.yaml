@@ -1,13 +1,22 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: local-bs-01
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: backstage-app
+  title: Backstage App
+  description: Una aplicación que muestra todo el poder de Backstage.
+  tags:
+    - backend
+    - python
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: my-awesome-app
+    github.com/project-slug: tu-org/my-awesome-app
 spec:
   type: website
-  owner: john@example.com
-  lifecycle: experimental
+  owner: team-platform
+  lifecycle: production
+  providesApis:
+    - my-awesome-api
+  dependsOn:
+    - component:default/my-database
+    - resource:default/my-s3-bucket
