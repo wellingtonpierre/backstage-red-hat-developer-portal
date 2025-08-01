@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: my-s3-bucket
+  description: Bucket S3 usado para almacenar archivos del sistema.
+spec:
+  type: s3-bucket
+  owner: team-platform
+  lifecycle: production

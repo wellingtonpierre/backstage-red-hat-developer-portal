@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-database
+  description: Base de datos usada por My Awesome App.
+spec:
+  type: database
+  owner: team-platform
+  lifecycle: production

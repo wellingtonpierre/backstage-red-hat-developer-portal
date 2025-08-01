@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: my-awesome-api
+  description: API REST usada por el servicio.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-platform
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: My Awesome API
+      version: 1.0.0
+    paths:
+      /hello:
+        get:
+          summary: Say hello
+          responses:
+            '200':
+              description: OK
